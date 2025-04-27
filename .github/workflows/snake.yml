@@ -1,22 +1,26 @@
-name: Generate Snake Animation
+name: Generate Itachi Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" # every day at midnight
+    - cron: "0 */6 * * *" # every 6 hours
   workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: Platane/snk@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate snake animation
+        uses: Platane/snk@v3
         with:
           github_user_name: userhimanshuverma
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - name: Push snake animation
+            dist/github-contribution-grid-snake-dark.svg?palette=red
+
+      - name: Push snake animation to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
