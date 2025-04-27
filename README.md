@@ -6,7 +6,7 @@
 </div>
 
 <p align="center">
-  <img src="https://github.com/userhimanshuverma/Himanshu-Verma/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
+  <img src="https://github.com/userhimanshuverma/userhimanshuverma/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
 </p>
 
 
